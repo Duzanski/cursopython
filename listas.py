@@ -15,3 +15,4 @@
 # Criando lista e acessando valores
 lista = ['A', 'B', 'C', 'D']
 print(lista)
+a
