@@ -1,5 +1,6 @@
 '''
 -> Fatiamento
+-> Desempacotamento
 -> Comandos
     -> Append
     -> Insert
@@ -104,3 +105,15 @@ while True:
         break
     else:
         print(f'A palavra secreta está assim: {palavra_secreta_temp}')
+
+# Desempacotando listas
+lista = ['Reinaldo', 'Duzanski', 'Junior']
+n1, n2, n3 = lista
+print(n2)
+
+# Caso não queira pegar o número de valores totais da lista posso gerar outra lista para evitar erro
+lista2 = ['Reinaldo', 'Duzanski', 'Junior', 2, 3, 4, 5]
+#                             pegará último valor
+n1, n2, n3, *restodosvalores, ultimo_valor = lista
+print(n2)
+print(restodosvalores)
