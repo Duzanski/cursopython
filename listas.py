@@ -47,7 +47,7 @@ print(l2)
 
 # Pop
 
-l2.pop()  # remove o último valor da 'lista'
+l2.pop()  # remove o último valor da lista
 print(l2)
 
 # Del
@@ -70,12 +70,37 @@ l3.clear()  # limpa a 'lista'
 # Jogo descubra a palavra secreta
 
 palavra_secreta = 'perfume'
-digitas = []
+digitadas = []
 chances = 3
 
+
 while True:
+    if chances == 0:
+        print('Número de chances esgotada')
+        break
+
     letra = input('Digite uma letra: ')
 
     if len(letra) > 1:
         print('Digite apenas uma letra')
+        continue
+    digitadas.append(letra)
+
+    if letra in palavra_secreta:
+        print(f'A letra {letra} existe na palavra secreta')
+    else:
+        print(f'A letra {letra} NÃO existe na palavra secreta')
+        digitadas.pop()
+        chances -= 1
+
+    palavra_secreta_temp = ''
+    for letra_secreta in palavra_secreta:
+        if letra_secreta in digitadas:
+            palavra_secreta_temp += letra_secreta
+        else:
+            palavra_secreta_temp += '*'
+    if palavra_secreta_temp == palavra_secreta:
+        print(f'Você ganhou!!! a palavra era -> {palavra_secreta_temp}')
         break
+    else:
+        print(f'A palavra secreta está assim: {palavra_secreta_temp}')
