@@ -4,7 +4,8 @@ Basicamente igual try/catch do java
 
 # Tratando a exceção
 try:
-    print(a)
+    # print(a)
+    ...
 except NameError as erro:
     print('Deu ruim')
 except Exception as erro:
@@ -12,7 +13,7 @@ except Exception as erro:
 else:
     print('Bloco executado com sucesso')
 finally:
-    print('Executa independente de erro ou não')
+    print('Execuddta independente de erro ou não')
 
 # Tratando uma execeção e relançando-a
 
